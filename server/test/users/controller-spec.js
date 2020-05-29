@@ -89,7 +89,7 @@ describe('users / controller', () => {
       return test({ userId, expectedStatus, expectedBody });
     });
 
-    it('should return status 404 when user is not found by req.params._id', () => {
+    it('should return status 404 when user is not found by req.params.userId', () => {
       let userId = nassert.getObjectId();
       let expectedStatus = 404;
       let expectedBody = {
@@ -304,7 +304,7 @@ describe('users / controller', () => {
       return test({ userId, userData, expectedStatus, expectedBody });
     });
 
-    it('should return status 404 when user is not found by req.params._id', () => {
+    it('should return status 404 when user is not found by req.params.userId', () => {
       let userId = nassert.getObjectId();
       let userData = {
         name: 'user1-new',
@@ -376,7 +376,7 @@ describe('users / controller', () => {
       return test({ userId, expectedStatus, expectedBody });
     });
 
-    it('should return status 404 when user is not found by req.params._id', () => {
+    it('should return status 404 when user is not found by req.params.userId', () => {
       let userId = nassert.getObjectId();
       let expectedStatus = 404;
       let expectedBody = {
