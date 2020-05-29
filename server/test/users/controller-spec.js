@@ -79,11 +79,11 @@ describe('users / controller', () => {
         .expect(res => nassert.assert(res.body, expectedBody));
     }
 
-    it('should return status 422 when req.params._id is invalid', () => {
+    it('should return status 422 when req.params.userId is invalid', () => {
       let userId = 'Invalid Id';
       let expectedStatus = 422;
       let expectedBody = {
-        message: '_id must be a valid ObjectId'
+        message: 'userId must be a valid ObjectId'
       };
 
       return test({ userId, expectedStatus, expectedBody });
@@ -239,7 +239,7 @@ describe('users / controller', () => {
         });
     }
 
-    it('should return status 422 when req.params._id is invalid', () => {
+    it('should return status 422 when req.params.userId is invalid', () => {
       let userId = 'InvalidId';
       let userData = {
         name: 'user1-new',
@@ -247,7 +247,7 @@ describe('users / controller', () => {
       };
       let expectedStatus = 422;
       let expectedBody = {
-        message: '_id must be a valid ObjectId'
+        message: 'userId must be a valid ObjectId'
       };
 
       return test({ userId, userData, expectedStatus, expectedBody });
@@ -366,11 +366,11 @@ describe('users / controller', () => {
         });
     }
 
-    it('should return status 422 when req.params._id is invalid', () => {
+    it('should return status 422 when req.params.userId is invalid', () => {
       let userId = 'Invalid Id';
       let expectedStatus = 422;
       let expectedBody = {
-        message: '_id must be a valid ObjectId'
+        message: 'userId must be a valid ObjectId'
       };
 
       return test({ userId, expectedStatus, expectedBody });
