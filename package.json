@@ -1,0 +1,36 @@
+{
+  "name": "meangl-starter",
+  "version": "0.1.0",
+  "description": "MEAN-GraphQL starter",
+  "private": true,
+  "engines": {
+    "node": "^10",
+    "npm": "^6"
+  },
+  "scripts": {
+    "postinstall": "npm install --prefix server && npm install --prefix client",
+    "update-all": "npm update && npm update --prefix server && npm update --prefix client",
+    "outdated-all": "(npm outdated || true) && (npm outdated --prefix server || true) && (npm outdated --prefix client || true)",
+    "build": "npm run build --prefix client",
+    "build:production": "npm run build:production --prefix client",
+    "start": "concurrently --kill-others \"npm start --prefix server\" \"npm run watch  --prefix client\"",
+    "lint": "npm run lint --prefix server && npm run lint --prefix client",
+    "test": "npm test --prefix server",
+    "coverage": "npm run coverage --prefix server",
+    "codecov": "npm run codecov --prefix server"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "concurrently": "^5.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AlexanderMac/meangl-starter"
+  },
+  "author": "Alexander Mac",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AlexanderMac/meangl-starter/issues"
+  },
+  "homepage": "https://github.com/AlexanderMac/meangl-starter"
+}
