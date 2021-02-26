@@ -1,5 +1,5 @@
-const { buildSchema } = require('graphql');
-const usersgl = require('../users/graph-ql');
+const { buildSchema } = require('graphql')
+const usersgl = require('../users/graph-ql')
 
-exports.schema = buildSchema(usersgl.schema);
-exports.root = usersgl.root;
+exports.schema = buildSchema(usersgl.schema)
+exports.root = usersgl.root

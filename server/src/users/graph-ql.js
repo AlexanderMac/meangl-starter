@@ -1,6 +1,6 @@
-const _ = require('lodash');
-const userHelpers = require('./helpers');
-const userSrvc = require('./data-service');
+const _ = require('lodash')
+const userHelpers = require('./helpers')
+const userSrvc = require('./data-service')
 
 exports.schema = `
 type User {
@@ -22,35 +22,35 @@ type Mutation {
   updateUser(userId: ID!, input: UserInput!): User!
   deleteUser(userId: ID!): Boolean
 }
-`;
+`
 
 exports.root = {
   user: async (args) => {
     let user = await userSrvc.getUserOne({
       filter: userHelpers.getSingleFilter(args)
-    });
-    return user.toJSON();
+    })
+    return user.toJSON()
   },
   users: async () => {
-    let users = await userSrvc.getUsers({});
-    return _.map(users, u => u.toJSON());
+    let users = await userSrvc.getUsers({})
+    return _.map(users, u => u.toJSON())
   },
   createUser: async (args) => {
-    let userData = userHelpers.parseUserParams(args.input || {});
-    let user = await userSrvc.createUser({ userData });
-    return user.toJSON();
+    let userData = userHelpers.parseUserParams(args.input || {})
+    let user = await userSrvc.createUser({ userData })
+    return user.toJSON()
   },
   updateUser: async (args) => {
     let user = await userSrvc.findAndUpdateUser({
       filter: userHelpers.getSingleFilter(args),
       userData: userHelpers.parseUserParams(args.input || {})
-    });
-    return user.toJSON();
+    })
+    return user.toJSON()
   },
   deleteUser: async (args) => {
     let user = await userSrvc.deleteUser({
       filter: userHelpers.getSingleFilter(args)
-    });
-    return !!user;
+    })
+    return !!user
   }
-};
+}

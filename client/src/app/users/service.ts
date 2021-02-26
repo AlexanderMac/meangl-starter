@@ -1,9 +1,9 @@
 import * as _ from 'lodash';
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs/Observable';
+import { Injectable } from '@angular/core'
+import { HttpClient } from '@angular/common/http'
+import { Observable } from 'rxjs/Observable'
 import { map } from 'rxjs/operators';
-import { User } from './model';
+import { User } from './model'
 
 @Injectable()
 export class UserService {
@@ -18,7 +18,7 @@ export class UserService {
           email
         }
       }
-    `;
+    `
     return this
       ._postGLQuery(query, { userId })
       .pipe(
@@ -35,12 +35,12 @@ export class UserService {
           email
         }
       }
-    `;
+    `
     return this
       ._postGLQuery(query)
       .pipe(
         map((data: any) => data.users)
-      );
+      )
   }
 
   createUser(userData: User): Observable<User> {
@@ -52,12 +52,12 @@ export class UserService {
           email
         }
       }
-    `;
+    `
     return this
       ._postGLQuery(query, { userInput: userData })
       .pipe(
         map((data: any) => data.users)
-      );
+      )
   }
 
   updateUser(userData: User): Observable<User> {
@@ -69,7 +69,7 @@ export class UserService {
           email
         }
       }
-    `;
+    `
     return this
       ._postGLQuery(query, {
         userId: userData.userId,
@@ -77,7 +77,7 @@ export class UserService {
       })
       .pipe(
         map((data: any) => data.users)
-      );
+      )
   }
 
   deleteUser(userId: string): Observable<boolean> {
@@ -85,12 +85,12 @@ export class UserService {
       mutation deleteUser($userId: ID!) {
         deleteUser(userId: $userId)
       }
-    `;
+    `
     return this
       ._postGLQuery(query, { userId })
       .pipe(
         map((data: any) => data.deleteUser)
-      );
+      )
   }
 
   private _postGLQuery(query: string, variables?: any): Observable<any> {
@@ -109,6 +109,6 @@ export class UserService {
           }
           return res.data;
         })
-      );
+      )
   }
 }

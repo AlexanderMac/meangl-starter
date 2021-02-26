@@ -1,6 +1,7 @@
-const webpackMerge = require('webpack-merge');
-const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
-const commonConfig = require('./webpack.common.js');
+const webpack = require('webpack')
+const { merge: webpackMerge } = require('webpack-merge')
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
+const commonConfig = require('./webpack.common.js')
 
 module.exports = webpackMerge(commonConfig, {
   mode: 'development',
@@ -14,6 +15,10 @@ module.exports = webpackMerge(commonConfig, {
       open: false,
       notify: true,
       reloadDelay: 500
+    }),
+
+    new webpack.DefinePlugin({
+      'process.env.APP_ENV': JSON.stringify('development')
     })
   ]
-});
+})
