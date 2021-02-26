@@ -1,9 +1,11 @@
 # meangl-starter
-`MEAN GraphQL` project template.
+
+Boilerplate for creating MEAN-GraphQL project.
+
 - Check [angular-starter](https://github.com/AlexanderMac/angular-starter) if you need Angular starter.
 - Check [express-starter](https://github.com/AlexanderMac/express-starter) if you need Express starter.
 
-[![Build Status](https://travis-ci.org/AlexanderMac/meangl-starter.svg?branch=master)](https://travis-ci.org/AlexanderMac/meangl-starter)
+[![Build Status](https://github.com/AlexanderMac/meangl-starter/workflows/CI/badge.svg)](https://github.com/AlexanderMac/meangl-starter/actions?query=workflow%3ACI)
 [![Code Coverage](https://codecov.io/gh/AlexanderMac/meangl-starter/branch/master/graph/badge.svg)](https://codecov.io/gh/AlexanderMac/meangl-starter)
 
 ### Features
@@ -22,9 +24,9 @@
 
 ### Set
 - Client:
-  - **Framework**: Angular v8
-  - **Language**: TypeScript v2
-  - **Build tool**: Webpack v4
+  - **Framework**: Angular v11
+  - **Language**: TypeScript v4
+  - **Build tool**: Webpack v5
   - **CSS preprocessor**: stylus
   - **CSS framework**: boostrap v4
   - **Template engine**: pug
@@ -33,7 +35,6 @@
   - **Backend**: express
   - **View engine**: pug
   - **Database**: mongodb
-  - **Promises**: bluebird
   - **Linter**: eslint
   - **Testing**: mocha, should, supertest, sinon
   - **Logger**: winston, morgan
