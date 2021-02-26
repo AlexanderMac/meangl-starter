@@ -1,11 +1,11 @@
 {
   "name": "meangl-starter",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "description": "MEAN-GraphQL starter",
   "private": true,
   "engines": {
-    "node": "^10",
-    "npm": "^6"
+    "node": ">=12",
+    "npm": ">=7"
   },
   "scripts": {
     "postinstall": "npm install --prefix server && npm install --prefix client",
@@ -17,11 +17,10 @@
     "lint": "npm run lint --prefix server && npm run lint --prefix client",
     "test": "npm test --prefix server",
     "coverage": "npm run coverage --prefix server",
-    "codecov": "npm run codecov --prefix server"
+    "coverage-gh": "npm run coverage-gh --prefix server"
   },
-  "dependencies": {},
   "devDependencies": {
-    "concurrently": "^5.2.0"
+    "concurrently": "^6.0.0"
   },
   "repository": {
     "type": "git",
