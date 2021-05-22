@@ -42,7 +42,7 @@ Boilerplate for creating MEAN-GraphQL project.
   - **Custom errors**: n-custom-errors
 
 ### How to use
-```sh
+```bash
 # Clone this repo:
 $ git clone https://github.com/AlexanderMac/meangl-starter.git
 
@@ -60,8 +60,7 @@ $ npm start
 ```
 
 ### Commands
-
-```sh
+```bash
 # Install all dependencies
 $ npm i
 
@@ -97,8 +96,8 @@ $ npm start
   - [src] - source files
   - [test] - unit and functional tests
 
+### License
+[MIT License](LICENSE)
+
 ### Author
 Alexander Mac
-
-### License
-[MIT License](license)
