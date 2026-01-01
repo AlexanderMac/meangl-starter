@@ -1,5 +1,7 @@
 # meangl-starter
 
+## WARNING :warning:: This repo is not maintained anymore.
+
 Boilerplate for creating MEAN-GraphQL project.
 
 - Check [angular-starter](https://github.com/AlexanderMac/angular-starter) if you need Angular starter.
